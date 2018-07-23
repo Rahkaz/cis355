@@ -1,5 +1,5 @@
 <?php
-    require 'database.php';
+function Delete(){    require 'database.php';
     $id = 0;
      
     if ( !empty($_GET['id'])) {
@@ -20,6 +20,7 @@
         header("Location: index.php");
          
     }
+}
 ?>
  
 <!DOCTYPE html>
