@@ -1,6 +1,6 @@
 <?php
 class Customer {
-	//Creating all the initial Variables that will be used in the program
+
     public $id;
     public $name;
     public $email;
@@ -12,7 +12,7 @@ class Customer {
     private $title = "Customer";
     private $tableName = "customers";
     
-	//We create a record :) it calls the generate top and bottome html in order to make it look like it does as well as call the bootstrap and css files
+	
     function create_record() { // display "create" form
         $this->generate_html_top (1);
         $this->control_group("name", $this->nameError, $this->name);
@@ -125,7 +125,7 @@ class Customer {
         }
         echo "<!DOCTYPE html>
         <html>
-			<a href="https://github.com/Rahkaz/cis355">GITHUB</a>
+			
             <head>
                 <title>$funWord a $this->title</title>
                     ";
@@ -226,6 +226,7 @@ class Customer {
     function list_records() {
         echo "<!DOCTYPE html>
         <html>
+		<a href='https://github.com/Rahkaz/cis355'>GITHUB</a>
             <head>
                 <title>$this->title" . "s" . "</title>
                     ";

@@ -1,6 +1,6 @@
 <?php
-//require the data database to connect to the table we created in PHP
-//require the customer.php.class that actually contains all out code
+
+
 require "crud/database.php";
 require "customer.class.php";
 $cust = new Customer();
