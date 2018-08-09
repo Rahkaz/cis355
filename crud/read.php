@@ -1,4 +1,8 @@
 <?php
+  session_start();
+if(!isset($_SESSION['username'])){
+	header("Location: login.php");
+}
     require 'database.php';
     $id = null;
     if ( !empty($_GET['id'])) {

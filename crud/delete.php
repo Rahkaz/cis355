@@ -1,4 +1,8 @@
 <?php
+  session_start();
+if(!isset($_SESSION['username'])){
+	header("Location: login.php");
+}
 function Delete(){    require 'database.php';
     $id = 0;
      
@@ -43,7 +47,7 @@ function Delete(){    require 'database.php';
                       <input type="hidden" name="id" value="<?php echo $id;?>"/>
                       <p class="alert alert-error">Are you sure to delete ?</p>
                       <div class="form-actions">
-                          <button href="index.php " type="submit" class="btn btn-danger">Yes</button>
+                          <button type="submit" class="btn btn-danger">Yes</button>
                           <a class="btn" href="index.php">No</a>
                         </div>
                     </form>

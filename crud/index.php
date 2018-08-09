@@ -1,4 +1,8 @@
 <?php
+session_start();
+if(!isset($_SESSION['username'])){
+	header("Location: login.php");
+}
 function Database(){include'database.php';$pdo=Database::connect();$sql='SELECT * FROM customer ORDER BY id DESC';foreach($pdo->query($sql)as $row){echo'<tr>';echo'<td>'.$row['name'].'</td>';echo'<td>'.$row['email'].'</td>';echo'<td>'.$row['mobile'].'</td>';echo'<td width=250>';echo'<a class="btn" href="read.php?id='.$row['id'].'">Read</a>';echo' ';echo'<a class="btn btn-success" href="update.php?id='.$row['id'].'">Update</a>';echo' ';echo'<a class="btn btn-danger" href="delete.php?id='.$row['id'].'">Delete</a>';echo'</td>';echo'</tr>';}
 Database::disconnect();}
 
@@ -40,6 +44,10 @@ Database::disconnect();}
 		
     <div class="container">
 	<a href="https://github.com/Rahkaz/cis355">GITHUB</a>
+	</br>
+	</br>
+	 <a  href="logout.php" class="btn btn-success" style="float: right;" >Log Out</a>
+	
             <div class="row">
                 <h3>PHP CRUD Grid</h3>
             </div>
