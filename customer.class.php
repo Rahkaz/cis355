@@ -245,6 +245,8 @@ class Customer {
                     <p>
                         <a href='$this->tableName.php?fun=1' class='btn btn-success'>Create</a>
                     </p>
+			
+
                     <div class='row'>
                         <table class='table table-striped table-bordered'>
                             <thead>

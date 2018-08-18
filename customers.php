@@ -42,3 +42,9 @@ switch ($fun) {
         $cust->list_records();
         break;
 }
+
+?>
+<html>
+<a href="https://csis.svsu.edu/~zserediu/cis355/upload.html">Upload</a>
+
+</html>
